@@ -2,9 +2,10 @@
 title: Hexo setup
 date: 2019-6-02 09:17:41
 tags:
-- tooling
+- hexo
+- mathjax
 categories:
-- software usage
+- tooling
 ---
 
 This post is how I deploy hexo into github.io.
@@ -131,6 +132,22 @@ $ hexo clean
 $ hexo generate
 ```
 
+### Add images to a post
+
+I use global asset folder to serve png/jpg/... files.
+
+```
+$ cd ~/hexo_root/blog
+$ mkdir -p source/images
+$ cp /tmp/hexo-setup.png source/images
+$ vi source/_posts/hexo-setup.md
+# Add the following in the appropriate position.
+
+![](/images/hexo-setup.png)
+```
+
+Another option is to use [post asset folder](https://hexo.io/docs/asset-folders.html).
+
 ### RSS support
 ```
 $ cd ~/hexo_root/blog
@@ -168,6 +185,6 @@ In the last step, the URL starts with https:// rather than http://. It is becaus
 
 Test math: $a = \sqrt{2} + 3$.
 
-The final page is
+### Screenshot
 
 ![](/images/hexo-setup.png)

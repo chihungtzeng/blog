@@ -2,9 +2,10 @@
 title: My .screenrc
 date: 2019-11-02 09:17:41
 tags:
-- tooling
+- linux
+- screen
 categories:
-- software usage
+- tooling
 ---
 
 Save the following as ~/.screenrc
