@@ -6,7 +6,10 @@ categories:
 - tooling
 ---
 
-This is a memo of how I work with binary files in Linux system.
+This is a memo of how I work with binary files in Linux system. For a more systematic study of this topic, I found the following two books quite useful. Their authors are Japenese, and I am not sure if there are Enghlish version.
+
+![binary_hacks.jpg](binary_hacks.jpg)
+
 
 ### Show defined symbols in a shared library
 
