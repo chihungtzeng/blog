@@ -51,4 +51,8 @@ Below are the screenshots of the result.
 ```bash
 git merge-base --is-ancestor remotes/origin/master HEAD
 ```
-If yes, then the command returns 0.
+If yes, then the command returns 0. Otherwise 1.
+- I use the following command to list the files in a merge request
+```
+git diff --name-only `git merge-base origin/master HEAD`
+```
