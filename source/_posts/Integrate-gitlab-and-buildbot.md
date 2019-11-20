@@ -6,6 +6,9 @@ tags:
 - gitlab
 categories:
 - tooling
+keywords:
+- GitLabStatusPush
+- merge request
 ---
 
 ### Situation
@@ -48,7 +51,7 @@ Below are the screenshots of the result.
 - In the merge request pipeline, I wrote a condition to decide if we are going to do a clean build or a dirty build. This way, we can make the pipeline run faster in most cases.
 - In each pipeline, log everything and reveal it to users so that people know how to respond if something goes wrong.
 - At the beginning of merge request pipeline, I check if the commit is based on the latest master by using the command
-```bash
+```
 git merge-base --is-ancestor remotes/origin/master HEAD
 ```
 If yes, then the command returns 0. Otherwise 1.
