@@ -45,17 +45,21 @@ Below are the screenshots of the result.
 
 ![mr_merge_only_success.png](mr_merge_only_success.png)
 
+In each merge request pipeline, we run an incremental build if possible, forbids any file larger than 15MB, and pylint for python files. If a pipeline stage fails, gitlab will show a red button in the merge request page to warn that the patch needs a further inspection.
+
 ### Note
 
 - When buildbot and gitlab do not integrate well, add **debug=True** in GitLabStatusPush() call in buildbot master.cfg. It will show what's going on between the two systems.
 - In the merge request pipeline, I wrote a condition to decide if we are going to do a clean build or a dirty build. This way, we can make the pipeline run faster in most cases.
 - In each pipeline, log everything and reveal it to users so that people know how to respond if something goes wrong.
-- At the beginning of merge request pipeline, I check if the commit is based on the latest master by using the command
+- At the beginning of merge request pipeline, the tip code is automatically merged
 ```
+git fetch
+git merge remotes/origin/master --no-ff
 git merge-base --is-ancestor remotes/origin/master HEAD
 ```
-If yes, then the command returns 0. Otherwise 1.
-- I use the following command to list the files in a merge request
+- To list the files in the merge request, use
 ```
 git diff --name-only `git merge-base origin/master HEAD`
 ```
+- cmake blog has [a great post](https://blog.kitware.com/static-checks-with-cmake-cdash-iwyu-clang-tidy-lwyu-cpplint-and-cppcheck/) about how to do static check. Some of them can be integrated into merge request pipeline.
