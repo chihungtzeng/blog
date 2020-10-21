@@ -1,5 +1,5 @@
 ---
-title: programming tips and tricks
+title: Classic leetcode problems
 date: 2020-10-14 19:08:07
 tags:
 categories:
@@ -17,8 +17,14 @@ This post is my collection of what I've learned from leetcode.
 - 719 Find K-th Smallest Pair Distance
   Use binary search to reduce the O(n^2) search space to O(n*log n).
 
+- 1192 Critical Connections in a Network
+  Application of DFS' back edges
+
 - 1231 Divide Chocolate
   Advanced binary search
+
+- 1312 Minimum Insertion Steps to Make a String Palindrome
+  Learn how to reduce DP space complexity from O(n^2) to O(n)
 
 - 1334 Find the City With the Smallest Number of Neighbors at a Threshold Distance
   Minimum distance with constraints.
