@@ -23,6 +23,12 @@ This post is my collection of what I've learned from leetcode.
 - 1231 Divide Chocolate
   Advanced binary search
 
+- 1286 Iterator for Combination
+  Generate combinations.
+
+- 1305 All Elements in Two Binary Search Trees
+  Merge two binary search tree and output sorted values in O(n) time, that is, without sorting.
+
 - 1312 Minimum Insertion Steps to Make a String Palindrome
   Learn how to reduce DP space complexity from O(n^2) to O(n)
 
